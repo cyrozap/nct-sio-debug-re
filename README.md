@@ -23,8 +23,9 @@ See [Notes.md](Notes.md) for protocol documentation.
 
 1. Install the protocol decoder.
    - On Linux, to do this you can either copy or link the [siodebuguart](siodebuguart) directory into `~/.local/share/libsigrokdecode/decoders/`.
-2. Run `./sr-siodebuguart-to-txt.sh cature.sr > logfile.txt` to process a srzip into a log file.
-3. Run `./monitor_io.py logfile.txt` to see the I/O port accesses and POST codes.
+2. Use a logic analyzer supported by sigrok or Pulseview to capture the `SIO_DEBUG` pin output at 6 MHz or higher (preferably 9 MHz or higher), then save the capture to an srzip file.
+3. Run `./sr-siodebuguart-to-txt.sh cature.sr > logfile.txt` to process a srzip into a log file.
+4. Run `./monitor_io.py logfile.txt` to see the I/O port accesses and POST codes.
 
 
 ## License
