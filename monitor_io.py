@@ -90,13 +90,11 @@ def main() -> int:
             long_code |= addr_data.data << 24
             print(f"POST code: 0x{long_code:08X}")
         else:
+            if previous_addr_data and previous_addr_data.addr == 0x80:
+                print(f"POST code: 0x{previous_addr_data.data:02X}")
             print(f"0x{addr_data.addr:04X}: 0x{addr_data.data:02X}")
-            continue
 
         previous_addr_data = addr_data
-
-    if previous_addr_data and previous_addr_data.addr == 0x80:
-        print(f"POST code: 0x{previous_addr_data.data:02X}")
 
     return 0
 
