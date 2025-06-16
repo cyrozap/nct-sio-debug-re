@@ -21,7 +21,7 @@
   - Bits 7-0 are definitely the low byte of the I/O port address when the value is in the range of 0x80-0x83, inclusive.
   - Bits 25-18 are definitely I/O port data when the I/O port address is in the range of 0x80-0x83, inclusive.
   - Bits 15-8 may be the high byte of the I/O port address, but I don't have a way to confirm this since I've only seen these bits set to zero.
-  - Bit 17-16 are completely unknown, since I've only ever seen them set to zero.
+  - Bits 17-16 are completely unknown, since I've only ever seen them set to zero.
 - This protocol is used for reading Port 80h (0x80) POST codes, as written by the CPU.
   - Traditionally, POST codes were only 8-bit, but newer ones can be 32-bit.
   - For 32-bit POST codes, the upper three bytes of the 32-bit DWORD are written to I/O ports 0x81, 0x82, and 0x83.
