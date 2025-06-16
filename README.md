@@ -42,19 +42,19 @@ If you come across a counterexample, feel free to let me know by opening an issu
 
 On motherboards, the serial Port 80h signal can be found on connectors with names and configurations that vary by manufacturer:
 
-- ASRock: `UART1` (1x4 pin header)
+- ASRock: `UART1` (1×4 pin header)
   - Pin 1: Unknown
   - Pin 2: Unknown
   - Pin 3: `NC` (key, empty)
   - Pin 4: Unknown
-- ASUS: `COM_DEBUG` (2x3 pin header)
+- ASUS: `COM_DEBUG` (2×3 pin header)
   - Pin 1: `O_COMDBG_P80` (serial Port 80h)
   - Pin 2: `GND`
   - Pin 3: `NC` (key, empty)
   - Pin 4: `GND`
   - Pin 5: `3V`
   - Pin 6: `O_COM1_TXD1` (UART TX, Super I/O)
-- MSI: `JDP1` (2x2 pin header)
+- MSI: `JDP1` (2×2 pin header)
   - Pin 1: `SIO_DEBUG` (serial Port 80h)
   - Pin 2: `5V`
   - Pin 3: `GND`
