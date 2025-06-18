@@ -13,7 +13,7 @@
 - The line has two states, high or low.
 - The stream starts with a preamble of many alternating highs and lows, with a period of about 84.375ns.
   - Looks like the clock of the chip starting up?
-    Freqiency increases from about 5 MHz to 12 MHz, then the line goes idle (high).
+    Frequency increases from about 5 MHz to 12 MHz, then the line goes idle (high).
   - Inverse happens when the chip powers down.
 - It's a UART with 1 start bit (low), 1 stop bit (high), and 26 data bits, running at 1.5 Mbaud.
 - Bit order on the line is little-endian.

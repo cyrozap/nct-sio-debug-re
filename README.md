@@ -1,4 +1,4 @@
-# Reverse enginnering Nuvoton's serial Port 80h protocol
+# Reverse engineering Nuvoton's serial Port 80h protocol
 
 This repository contains a description of the serial protocol used to transmit I/O port 80h (0x80) data, sometimes referred to as "POST codes", from a host PC to a debugging device.
 This repository also contains some tools to aid in decoding this protocol.
@@ -11,7 +11,7 @@ See [Protocol description](#protocol-description) for protocol documentation.
 
 This protocol can be used to read POST codes written by the BIOS/UEFI to x86 I/O port 80h (0x80), which can help in troubleshooting system startup issues.
 
-The serial Port 80h procotol is used on some newer motherboards for AMD and Intel CPUs.
+The serial Port 80h protocol is used on some newer motherboards for AMD and Intel CPUs.
 Specifically, motherboards that use Nuvoton Super I/O ("SIO") chips and don't have an LPC port exposed.
 Presumably, this protocol exists to enable debugging modern systems that don't have accessible LPC ports.
 LPC has been slowly phased out in recent years, so while it used to be common to see LPC used on TPM headers, now that TPMs are more frequently using SPI instead, those ports are no longer accessible to the user.
@@ -34,7 +34,7 @@ If you come across a counterexample, feel free to let me know by opening an issu
 1. Install the protocol decoder.
    - On Linux, to do this you can either copy or link the [siodebuguart](siodebuguart) directory into `~/.local/share/libsigrokdecode/decoders/`.
 2. Use a logic analyzer supported by sigrok or Pulseview to capture the serial Port 80h pin output at 6 MHz or higher (preferably 9 MHz or higher), then save the capture to an srzip file.
-3. Run `./sr-siodebuguart-to-txt.sh cature.sr > logfile.txt` to process a srzip into a log file.
+3. Run `./sr-siodebuguart-to-txt.sh capture.sr > logfile.txt` to process a srzip into a log file.
 4. Run `./monitor_io.py logfile.txt` to see the I/O port accesses and POST codes.
 
 
